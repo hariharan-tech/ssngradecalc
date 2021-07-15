@@ -22,7 +22,7 @@ def calculategpa():
         grade=0
 
         for i in rd:
-            grade+=(int(rd[i][0])*rd[i][1])
+            grade=grade+(int(rd[i][0])*int(rd[i][1]))
 
         grade=float(grade/22)
         print(grade)       
