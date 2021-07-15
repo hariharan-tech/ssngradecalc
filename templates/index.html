@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sem 1 Grade Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-dark text-light" style="text-align: center;">
+    <div class="alert alert-danger">
+        <strong>{{alertext}}</strong>
+    </div>
+    <h2 class="my-5">Semester 1 Grade Calculator</h2>
+    <h4 class="my-5">Only applicable for SSN students</h4>
+    <h4 class="my-3">Fill in your details</h4>
+    <form action="/" method="POST" class="w-50 mx-auto my-3">
+        <div class="form-group">
+            <label>Enter Grade scored in UEN1176 Communicative English (3 Credits):</label>
+            <select class="form-control" name="eng">
+              <option selected value="0">-- Select an option --</option>
+              <option value="10">O</option>
+              <option value="9">A+</option>
+              <option value="8">A</option>
+              <option value="7+">B+</option>
+              <option value="6">B</option>
+              <option value="ra">RA</option>
+              <option value="sa">SA</option>
+              <option value="w">W</option>
+              <option value="ab">AB</option>
+              <option value="au">AU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enter Grade scored in UMA1176 Algebra and Calculus (4 Credits):</label>
+            <select class="form-control" name="ac">
+                <option selected value="0">-- Select an option --</option>
+                <option value="10">O</option>
+              <option value="9">A+</option>
+              <option value="8">A</option>
+              <option value="7+">B+</option>
+              <option value="6">B</option>
+                <option value="ra">RA</option>
+                <option value="sa">SA</option>
+                <option value="w">W</option>
+                <option value="ab">AB</option>
+                <option value="au">AU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enter Grade scored in UPH1176 Engineering Physics (3 Credits):</label>
+            <select class="form-control" name="uph">
+                <option selected value="0">-- Select an option --</option>
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7+">B+</option>
+                <option value="6">B</option>
+              <option value="ra">RA</option>
+              <option value="sa">SA</option>
+              <option value="w">W</option>
+              <option value="ab">AB</option>
+              <option value="au">AU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enter Grade scored in UCY1176 Engineering Chemistry (3 Credits):</label>
+            <select class="form-control" name="ucy">
+                <option selected value="0">-- Select an option --</option>
+                <option value="10">O</option>
+              <option value="9">A+</option>
+              <option value="8">A</option>
+              <option value="7+">B+</option>
+              <option value="6">B</option>
+                <option value="ra">RA</option>
+                <option value="sa">SA</option>
+                <option value="w">W</option>
+                <option value="ab">AB</option>
+                <option value="au">AU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enter Grade scored in UGE1176 Problem Solving and
+                Programming in Python (3 Credits):</label>
+            <select class="form-control" name="pyt">
+                <option selected value="0">-- Select an option --</option>
+                <option value="10">O</option>
+              <option value="9">A+</option>
+              <option value="8">A</option>
+              <option value="7+">B+</option>
+              <option value="6">B</option>
+                <option value="ra">RA</option>
+                <option value="sa">SA</option>
+                <option value="w">W</option>
+                <option value="ab">AB</option>
+                <option value="au">AU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enter Grade scored in UGE1177 Engineering Graphics (3 Credits):</label>
+            <select class="form-control" name="eg">
+                <option selected value="0">-- Select an option --</option>
+                <option value="10">O</option>
+              <option value="9">A+</option>
+              <option value="8">A</option>
+              <option value="7+">B+</option>
+              <option value="6">B</option>
+                <option value="ra">RA</option>
+                <option value="sa">SA</option>
+                <option value="w">W</option>
+                <option value="ab">AB</option>
+                <option value="au">AU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enter Grade scored in UGE1197 Programming in Python Lab (1.5 Credits):</label>
+            <select class="form-control" name="ppl">
+                <option selected value="0">-- Select an option --</option>
+                <option value="10">O</option>
+              <option value="9">A+</option>
+              <option value="8">A</option>
+              <option value="7+">B+</option>
+              <option value="6">B</option>
+                <option value="ra">RA</option>
+                <option value="sa">SA</option>
+                <option value="w">W</option>
+                <option value="ab">AB</option>
+                <option value="au">AU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enter Grade scored in UGS1197 Physics and Chemistry Lab (1.5 Credits):</label>
+            <select class="form-control" name="pcl">
+                <option selected value="0">-- Select an option --</option>
+                <option value="10">O</option>
+              <option value="9">A+</option>
+              <option value="8">A</option>
+              <option value="7+">B+</option>
+              <option value="6">B</option>
+                <option value="ra">RA</option>
+                <option value="sa">SA</option>
+                <option value="w">W</option>
+                <option value="ab">AB</option>
+                <option value="au">AU</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-danger my-5">Calculate</button>
+    </form>
+    <table class="table w-50 mx-auto text-white my-5">
+        <tbody>
+          <tr>
+            <th scope="row">Grade</th>
+            <td>{{grade}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Result Text</th>
+            <td>{{rtext}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <footer class="bg-secondary" style="height:50px; margin-top: 5rem;">
+        <h6>Created by Hariharan A</h6>    
+    </footer>
+</body>
+</html>
