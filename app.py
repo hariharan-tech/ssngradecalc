@@ -25,7 +25,7 @@ def calculategpa():
         grade=0
         for i in rd:
             grade+=(int(rd[i][0])*rd[i][1])
-            print(grade)
+#             print(grade)
 
         grade=round(float(grade/22),1)
         return render_template('results.html',grade=grade)
