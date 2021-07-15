@@ -26,7 +26,7 @@ def calculategpa():
         for i in rd:
             grade+=(int(rd[i][0])*int(rd[i][1]))
 
-        grade=float(grade/22)    
+        grade=round(float(grade/22),4)
         if grade >= 9:
             rtext = "Vera Level Bro!"
         elif grade >= 8 and grade < 9:
