@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    Results
+{% endblock title %}
+{% block body %}
+{% block customstyle %}
+<style>footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+</style>
+{% endblock customstyle %}
+<h2 class="my-5">Results</h2>
+<table class="table w-50 mx-auto text-white my-5 h2" id="results">
+    <tbody>
+      <tr>
+        <th>GPA</th>
+        <td>{{grade}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="/" class="text-light text-underline"><u>Check another result..</u></a>
+{% endblock body %}
