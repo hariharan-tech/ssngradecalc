@@ -15,6 +15,10 @@ form{
     margin-top: 3rem;
 }
 
+#toggle_mode{
+    border:solid black 3px;
+}
+
 .leftal{
     z-index: 1;
 }
@@ -22,9 +26,7 @@ form{
 footer{
     background-color: black;
     padding:2rem 0;
-    position: absolute;
-    width:100%;
-    bottom:0;
+    margin-top:7.5rem;
     z-index:0;
 }
 
@@ -41,8 +43,5 @@ footer{
         position:sticky;
         text-align: right;
         bottom:0.8rem;
-    }
-    footer{
-        position:relative;
     }
 }
