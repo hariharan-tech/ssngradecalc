@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+    margin-top:2rem;
+}
+
+.gpa-result{
+    padding: 1rem;
+    background-color: black;
+    font-size:2rem;
+    border-radius: 20px;
+}
+
+form{
+    text-align: left;
+    margin-top: 3rem;
+}
+
+.leftal{
+    z-index: 1;
+}
+
+footer{
+    background-color: black;
+    padding:2rem 0;
+    position: absolute;
+    width:100%;
+    bottom:0;
+    z-index:0;
+}
+
+@media screen and (min-width:780px){
+    .leftal{
+        position:absolute;
+        bottom:1rem;
+        right:1rem;
+    }
+}
+
+@media screen and (max-width:780px){
+    .leftal{
+        position:sticky;
+        text-align: right;
+        bottom:0.8rem;
+    }
+    footer{
+        position:relative;
+    }
+}
