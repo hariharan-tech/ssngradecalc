@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+    <style>
+        footer{
+            position: absolute;
+            bottom:0;
+            width:100%;
+            z-index:-1;
+        }
+        </style>
+    <title>CGPA Calculator</title>
+</head>
+<body class="bg-dark text-light">
+    <span class="gpa-result">Your CGPA: <span id="result-box"></span></span>
+    <form class="container">
+        <div class="form-group row">
+            <div class="col-sm-3"></div>
+            <label for="" class="col-sm-3 col-form-label">Enter Semester 1 GPA: </label>
+            <div class="col-sm-3">
+                <input type="number" class="form-control inp" min="0" max="10" name="sem1">
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-3"></div>
+            <label for="" class="col-sm-3 col-form-label">Enter Semester 2 GPA: </label>
+            <div class="col-sm-3">
+                <input type="number" class="form-control inp" min="0" max="10" name="sem2">
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-3"></div>
+            <label for="" class="col-sm-3 col-form-label">Enter Semester 3 GPA: </label>
+            <div class="col-sm-3">
+                <input type="number" class="form-control inp" min="0" max="10" name="sem3">
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </form>
+    <br><br>
+    <div class="leftal">
+        <button class="btn btn-secondary" id="toggle_mode">Change theme</button>
+      </div>
+      <footer>
+        <span>
+          Made by <a href="https://github.com/hariharan-tech">Hariharan A</a>
+        </span>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script>
+        // Theme changing
+    function toggle_theme(){
+        document.getElementsByTagName("body")[0].classList.toggle("bg-secondary");
+        document.getElementsByTagName("body")[0].classList.toggle("bg-dark");
+        document.getElementById("toggle_mode").classList.toggle("btn-dark");
+        document.getElementById("toggle_mode").classList.toggle("btn-secondary");
+    }
+        // Calling the Theme toggle function when click on Toggle theme button
+        document.getElementById("toggle_mode").addEventListener("click", toggle_theme);
+
+        // CGPA calculator
+
+        // Add eventlistners
+        var a = document.getElementsByClassName("inp");
+        for(let i=0;i<a.length;i++){
+            a[i].addEventListener("input",cgpa_calc);
+        }
+
+        var b = {"sem1":[22,0],"sem2":[23,0],"sem3":[24,0]}
+        var cgp = 0;
+
+        function cgpa_calc(e){
+            var gpa = parseFloat(e.target.value);
+            var sub = e.target.name;
+            if(gpa>10 || gpa<0){
+                alert("Enter a valid Option!");
+            }
+            else{
+                cgp-=(b[sub][1]*b[sub][0]/69);
+                b[sub][1] = gpa;
+                cgp+=(gpa*b[sub][0]/69);
+                document.getElementById("result-box").innerHTML = Math.round(cgp*1000)/1000;
+            }
+        }
+    </script>
+</body>
+</html>
