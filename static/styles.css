@@ -19,7 +19,7 @@ form{
     border:solid black 3px;
 }
 
-.leftal{
+.leftal .rightal{
     z-index: 1;
 }
 
@@ -36,12 +36,22 @@ footer{
         bottom:1rem;
         right:1rem;
     }
+    .rightal{
+        position:absolute;
+        bottom:1rem;
+        left:1rem;
+    }
 }
 
 @media screen and (max-width:780px){
     .leftal{
         position:sticky;
         text-align: right;
+        bottom:0.8rem;
+    }
+    .rightal{
+        position:sticky;
+        text-align: left;
         bottom:0.8rem;
     }
 }
